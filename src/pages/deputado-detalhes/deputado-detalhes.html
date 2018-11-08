@@ -1,0 +1,40 @@
+<!--
+  Generated template for the DeputadoDetalhesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhes Deputado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card *ngIf="deputado">
+  <img src="{{deputado.ultimoStatus.urlFoto}}" width="50%" />
+  <ion-card-content>
+    <ion-card-title>
+      {{deputado.nome}}
+    </ion-card-title>
+    <p>
+      Nascimento: {{deputado.dataNascimento}}
+    </p>
+    <p>Escolaridade: {{deputado.escolaridade}}</p>
+    <p>Cidade Natal: {{deputado.municipioNascimento}}</p>
+    <p>Sexo: {{deputado.sexo}}</p>
+
+  </ion-card-content>
+  <ion-card-header>
+    Gabinete
+  </ion-card-header>
+  <ion-card-content>
+    <p>E-mail: {{deputado.ultimoStatus.gabinete.email}}</p>
+    <p>Telefone: {{deputado.ultimoStatus.gabinete.telefone}}</p>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
